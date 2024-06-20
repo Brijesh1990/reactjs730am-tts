@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gray.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    <!-- bvalidator for validations -->
+    <script src="js/jquery.bvalidator.min.js"></script>
+    <script src="js/default.min.js"></script>
+    <script src="js/gray.js"></script>
+
+    <script>
+        $(document).ready(function(){
+         $("#frm").bValidator();   
+        })
+    </script>
+
+    <!-- chart -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type='text/javascript'>
+      google.charts.load('current', {'packages':['annotationchart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', 'Kepler-22b mission');
+        data.addColumn('string', 'Kepler title');
+        data.addColumn('string', 'Kepler text');
+        data.addColumn('number', 'Gliese 163 mission');
+        data.addColumn('string', 'Gliese title');
+        data.addColumn('string', 'Gliese text');
+        data.addRows([
+          [new Date(2314, 2, 15), 12400, undefined, undefined,
+                                  10645, undefined, undefined],
+          [new Date(2314, 2, 16), 24045, 'Lalibertines', 'First encounter',
+                                  12374, undefined, undefined],
+          [new Date(2314, 2, 17), 35022, 'Lalibertines', 'They are very tall',
+                                  15766, 'Gallantors', 'First Encounter'],
+          [new Date(2314, 2, 18), 12284, 'Lalibertines', 'Attack on our crew!',
+                                  34334, 'Gallantors', 'Statement of shared principles'],
+          [new Date(2314, 2, 19), 8476, 'Lalibertines', 'Heavy casualties',
+                                  66467, 'Gallantors', 'Mysteries revealed'],
+          [new Date(2314, 2, 20), 0, 'Lalibertines', 'All crew lost',
+                                  79463, 'Gallantors', 'Omniscience achieved']
+        ]);
+
+        var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+
+        var options = {
+          displayAnnotations: true
+        };
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <!-- admin header -->
+    <div class="admin-header container-fluid border  border-bottom-1 border-dark m-0 p-0">
+        <div class="row">
+            <div class="admin-logo col-md-3 bg-dark p-3">
+                <span class="text-white ms-4">Admin Dashboard  <button type="button" class="btn btn-sm border border-0 text-white ms-5"><span class="bi bi-grid"></span></button></span>
+            </div>
+            <div class="search-box col-md-6 p-3">
+                <div class="input-group">
+                    <input type="search" name="search" placeholder="search anything here" class="form-control">
+                    <button type="button" class="btn btn-sm btn-dark bg-dark m-0 p-0 border border-0"><span class="input-group-text bg-dark border border-0"><i class="bi bi-search text-white"></i></span></button>
+                </div>
+            </div>
+            <div class="admin-notification col-md-3 p-2 mt-0">
+
+                <button type="button" class="btn btn-sm btn-danger text-white">
+                    <span class="badge bg-danger start-0 top-0 rounded-pill"><span class="bi bi-person-add">0</span></span>
+
+                    <button type="button" class="btn btn-sm btn-dark text-white ms-1">
+                        <span class="badge bg-dark start-0 top-0 rounded-pill"><span class="bi bi-bell">10</span></span>
+                </button>
+
+                  <!-- dropdown of button -->
+                    <button class="btn btn-sm border border-0 mt-1">
+                        <ul class="header-link">
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">welcome :Admin</a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="#"><span class="bi bi-person"></span> Manage Profile</a></li>
+                            <li><a href="#"><span class="bi bi-lock"></span> Change Password</a></li>
+                            <li><a href="#"><span class="bi bi-bell"></span> Manage Notifications</a></li>
+                            <li><a href="#"><span class="bi bi-truck"></span> Manage Orders</a></li>
+                            <li><a href="#"><span class="bi bi-power"></span> Logout here</a></li>
+                        </ul>
+                        </li>
+                        </ul>
+                
+                    </button>
+         
+            </div>
+        </div>
+    </div>
+    <!-- admin sidebar -->
+    <section id="dashboard-content" >
+        <div class="container-fluid m-0 p-0">
+        <div class="row">
+                
+        <div class="admin-sidebar bg-dark col-md-3 m-0 p-3">
+        <ul class="sidebar-link m-0 p-0">
+            <li><a href="#"><img src="https://icon-library.com/images/admin-login-icon/admin-login-icon-11.jpg" class="img-fluid w-50 "></a></li>
+            <li><a href="#"><span class="bi bi-person"></span> Manage Customers</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-bs-toggle="dropdown" href="#"><span class="bi bi-cart"></span> Add Category</a>
+            <ul class="dropdown-menu bg-white text-dark">
+                <li><a href="#"><span class="bi bi-cart"></span> Add Category</a></li>
+                <li><a href="#"><span class="bi bi-cart"></span> Manage Category</a></li>
+            </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-bs-toggle="dropdown" href="#"><span class="bi bi-cart"></span> Add SubCategory</a>
+                <ul class="dropdown-menu bg-white text-dark">
+                    <li><a href="#"><span class="bi bi-cart"></span> Add SubCategory</a></li>
+                    <li><a href="#"><span class="bi bi-cart"></span> Manage SubCategory</a></li>
+                </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-bs-toggle="dropdown" href="#"><span class="bi bi-cart"></span> Add Products</a>
+                    <ul class="dropdown-menu bg-white text-dark">
+                        <li><a href="#"><span class="bi bi-cart"></span> Add Products</a></li>
+                        <li><a href="#"><span class="bi bi-cart"></span> Manage Products</a></li>
+                    </ul>
+                    </li>
+            <li><a href="#"><span class="bi bi-bell"></span> Manage Orders</a></li>
+            <li><a href="#"><span class="bi bi-phone"></span> Manage Contacts</a></li>
+            <li><a href="#"><span class="bi bi-command"></span> Manage Reviews</a></li>
+            <!-- <li><a href="#" class="btn btn-sm btn-danger text-white" onclick="return confirm('Are you sure to Logout ?')"><span class="bi bi-power"></span> Logout ?</a></li> -->
+            <li><a href="#" class="btn btn-sm btn-danger text-white" data-bs-toggle="modal" data-bs-target="#lg"><span class="bi bi-power"></span> Logout ?</a></li>
+        </ul>
+    </div>
+    <!-- admin dashboard content -->
+    <div class="admin-dashboard col-md-9 p-3">
+        <h2 class="ms-3 p-4 mt-3">Welcome to Admin dashboard</h2>
+        <hr class="border border-1 border-dark w-50 ms-5" align="left">   
+        <div class="row">
+            <div class="col-md-3 ms-5 p-3 mt-2 bg-success">
+                <p class="text-center fs-4">Total Customers</p>
+                <p class="text-center"><button type="button" class="btn btn-sm btn-danger border border-0"><span class="badge badge-danger start-0 top-0"><i class="bi bi-person"></i>100</span></button></p>
+            </div>
+            <div class="col-md-3 ms-5 p-3 mt-2 bg-danger">
+                <p class="text-center fs-4">Total Subcategory</p>
+                <p class="text-center"><button type="button" class="btn btn-sm btn-danger border border-0"><span class="badge badge-danger start-0 top-0"><i class="bi bi-person"></i>100</span></button></p>
+            </div>
+            <div class="col-md-3 ms-5 p-3 mt-2 bg-primary">
+                <p class="text-center fs-4">Total Orders</p>
+                <p class="text-center"><button type="button" class="btn btn-sm btn-danger border border-0"><span class="badge badge-danger start-0 top-0"><i class="bi bi-person"></i>100</span></button></p>
+            </div>
+            <div class="col-md-3 ms-5 p-3 mt-2 bg-success">
+                <p class="text-center fs-4">Total Contacts</p>
+                <p class="text-center"><button type="button" class="btn btn-sm btn-danger border border-0"><span class="badge badge-danger start-0 top-0"><i class="bi bi-person"></i>100</span></button></p>
+            </div>
+            <div class="col-md-3 ms-5 p-3 mt-2 bg-danger">
+                <p class="text-center fs-4">Total Category</p>
+                <p class="text-center"><button type="button" class="btn btn-sm btn-danger border border-0"><span class="badge badge-danger start-0 top-0"><i class="bi bi-person"></i>100</span></button></p>
+            </div>
+            <div class="col-md-3 ms-5 p-3 mt-2 bg-primary">
+                <p class="text-center fs-4">Total Reviews</p>
+                <p class="text-center"><button type="button" class="btn btn-sm btn-danger border border-0"><span class="badge badge-danger start-0 top-0"><i class="bi bi-person"></i>100</span></button></p>
+            </div>
+        </div>
+
+        <h2 class="ms-3 p-4 mt-3">Monthly growth</h2>
+        <hr class="border border-1 border-dark w-25 ms-5" align="left">  
+
+        <div id='chart_div' style='width: 90%; height: 350px;'></div>
+
+    </div>
+
+    
+</div>
+</div>
+    </section>
+    <!-- admin footer -->
+    <div class="admin-footer"></div>
+    <!-- logout modal here -->
+    <div class="modal fade" id="lg" role="dialog">
+        <!-- modal dialog box -->
+        <div class="modal-dialog">
+            <!-- logout modal content -->
+            <div class="modal-content p-4">
+                <h3 class="text-center text-danger p-3">Are you sure to Logout ?  <button type="button" class="btn btn-sm btn-danger border border-0 ms-5" data-bs-dismiss="modal">&times;</button></h3>
+                <p class="text-center mt-3">
+                    <a href="#" onclick="logout_btn()"><button type="button" id="btn1"  class="btn btn-sm btn-success text-white border border-0">Ok</button></a>
+                    <button type="button" data-bs-dismiss="modal" id="btn2" class="btn btn-sm btn-danger text-white border border-0 ms-2">Cancel</button>
+                </p>
+
+            </div>    
+        </div>
+
+    </div>
+
+<script src="js/main.js"></script>  
+
+
+ </body>
+ </html>   
