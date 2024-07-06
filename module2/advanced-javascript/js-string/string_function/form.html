@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        function frm()
+        {
+            var fnm=document.getElementById("firstname");
+            fnm.value=fnm.value.toUpperCase();
+
+            
+            var lnm=document.getElementById("lastname");
+            lnm.value=lnm.value.toUpperCase();
+
+            
+            var em=document.getElementById("email");
+            em.value=em.value.toUpperCase();
+
+            
+            var ad=document.getElementById("address");
+            ad.value=ad.value.toUpperCase();
+            
+            var sub=document.getElementById("subject");
+            sub.value=sub.value.toUpperCase();
+
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h2>Fill all (*) field in uppercase</h2>
+        <form>
+           <input type="text" name="fname" id="firstname" placeholder="FirstName *" onblur="frm()" required />
+           <br><br>
+           <input type="text" name="lname" id="lastname" onblur="frm()"  placeholder="LastName *" required />
+           <br><br>
+           <input type="text" name="email" id="email" onblur="frm()"  placeholder="Email *" required />
+           <br><br>
+           <textarea name="address" placeholder="address *" id="address" onblur="frm()"  required ></textarea>
+           <br><br>
+           <input type="text" name="subject" id="subject" onblur="frm()"  placeholder="subject *" required />
+           <br><br>
+
+           <input type="submit" name="submit" value="Submit" />
+        </form>
+    </center>
+</body>
+</html>

@@ -1,12 +1,8 @@
-#addForm li 
+body 
 {
-   
-    text-decoration: none;
-    list-style-type: none;
-}
-#addForm a 
-{
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: lightskyblue;
 }
