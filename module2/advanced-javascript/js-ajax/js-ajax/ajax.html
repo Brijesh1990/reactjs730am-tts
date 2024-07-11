@@ -14,7 +14,18 @@
     <script>
      function str(val)
      {
+      $.ajax({
+        
+          type:"GET",
+          url:"employee.html",
+          data:"comp="+val,
+          success:function(data)
+          {
+            $("#emp").html(data);
 
+          }
+
+      })
      }
     </script>
 </head>
@@ -22,11 +33,15 @@
 
     <div class="w-75 shadow p-5 mt-5 mx-auto">
       <form>
-        select company : <select id="comp" class="form-control w-75">
+        select company : <select id="comp" class="form-control w-75" onchange="return str(this.value)">
             <option value="">-select company-</option>
             <option value="Tops Technology">Tops Technology</option>
         </select>
       </form>
+
+      <table id="emp">
+
+      </table>
     </div>
 </body>
 </html>

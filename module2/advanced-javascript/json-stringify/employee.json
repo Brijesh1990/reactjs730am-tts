@@ -1,0 +1,33 @@
+{
+    "employee-details":[
+        {
+            "id":1001,
+            "name":"brijesh",
+            "salary":89500,
+            "pincode":360005,
+            "department":"Technical analyst"
+            
+        },
+
+        {
+            "id":1002,
+            "name":"Rakesh",
+            "salary":19500,
+            "pincode":360005,
+            "department":"Training"
+            
+        }
+
+    ],
+
+    "contact-us":[
+        {
+            "id":1001,
+            "name":"brijesh",
+            "email":"b@gmail.com",
+            "mobile":9998003879,
+            "subject":"24x7 customer care support",
+            "message":"hi please send customers care numbers"
+        }
+    ]
+}
