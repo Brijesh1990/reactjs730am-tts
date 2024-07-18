@@ -6,10 +6,10 @@ whenever we access only one parent class properties access by its one child clas
 
 class A 
 {
-  constructor(name,age)
+  constructor(nm,age)
   {
   
-  this.name=name;
+  this.nm=nm;
   this.age=age;
   
   }
@@ -17,9 +17,9 @@ class A
 }
 class B extends A
 {
-constructor(dep,salary)
+constructor(nm,age,dep,salary)
 {
-super(name,age,dep,salary);
+super(nm,age);
 this.dep=dep;
 this.salary=salary;
 }

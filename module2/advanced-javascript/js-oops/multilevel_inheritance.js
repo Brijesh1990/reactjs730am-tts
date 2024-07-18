@@ -1,6 +1,5 @@
 /* 
 whenever we access  one parent class properties access by its  child class i.e called multilevel  inheritance
-
 A=>B=>C=>D=>E
 
 */ 

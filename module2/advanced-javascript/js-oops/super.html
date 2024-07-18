@@ -1,0 +1,32 @@
+<script>
+/* 
+whenever we access only one parent class properties access by its one child class i.e called single inheritance
+super is a keyword i.e used to access parent class properties by its child class i.e called super
+
+*/ 
+
+class A 
+{
+  constructor(name,age)
+  {
+  
+  this.name=name;
+  this.age=age;
+  
+  }
+
+}
+class B extends A
+{
+constructor(name,age,dep,salary)
+{
+super(name,age);
+this.dep=dep;
+this.salary=salary;
+}
+}
+
+var obj=new B("brijesh",35,"Information technology",89500);
+console.log(obj);
+
+</script>
