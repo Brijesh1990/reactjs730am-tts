@@ -99,6 +99,78 @@ what is React js ?
     step7:how to start app using vite
           npm run dev 
 
+      http://localhost:5173
+
+
+
+      React js directory systems :
+
+      node_modules : node_modules is a package | module | library installer of react js app all packages and modules are installed inside of node_modules. React main module React and React-DOM is comming from node_modules
+          App.jsx
+          import React from 'react';
+          import ReactDOM from 'react-dom/client'
+      
+      
+      public :public is open for assets of your applications 
+                     assets => css | images | js | fonts 
+      src : src is main folders of your applications 
+            src is open for creating all components of your applications    
+            components is a small peace of file that is save as .js or .jsx 
+            .js is a extension of javascript when we create app with npx create-react-app appname we can take extension of components with both way .js and .jsx.
+            when we create any application using via vite we saved any components with using only .jsx 
+            examples :  App.jsx
+                        Services.jsx
+                        About.jsx
+
+
+            examples : Note : we can take components name always first letter should be uppercase 
+                          About.jsx
+                          Services.js
+                          Products.jsx
+                          Cart.js 
+
+
+      what is jsx inside of React js : 
+            jsx stands for javascript xml or javascript execute file 
+            
+             App.jsx => javascript xml 
+                         xml stands for x-tensible markup language 
+                         xml is used to load a dynamic content inside of React js 
+                         
+            jsx is used to access html elements inside of React js components.
+             
+            
+      index.html : index.html is a main web page or landing page that is load on web broswer and it is called inside src=>components=>main.jsx  via Virtual DOM document.getElementById("demo");
+
+        examples : ReactDOM.createRoot(document.getElementById("demo"));
+        
+        Note : index.html is our landing web page and it is created only one times 
+
+      package.json :  package.json is an environment file inside of react js app that is used to registered all basics informations about our applications 
+
+                      React js appname 
+                      React js versions 
+                      React js all module is also registered inside of package.json
+                      
+                       "name": "hello-app",
+                       "react": "^18.3.1",
+                       "react-dom": "^18.3.1"
+                        "@types/react": "^18.3.3",
+
+      package-lock.json :
+      vite.config :
+        import { defineConfig } from 'vite'
+        import react from '@vitejs/plugin-react'
+
+        // https://vitejs.dev/config/
+        export default defineConfig({
+       plugins: [react()],
+      })
+
+
+      README : 
+      gitignore : if user want to uploade app inside of github.com and does not want to upload particular foleder without deleting main folder and want to ignore to upload on github there we used .gitignore
+
 
 
 
