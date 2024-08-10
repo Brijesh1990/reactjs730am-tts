@@ -1,0 +1,26 @@
+
+body 
+{
+margin: 0px;
+padding: 0px;
+background-color: lightblue;
+}
+.content 
+{
+width: 50%;
+height: auto;
+margin: auto;
+
+}
+.content h1 
+{
+    color: blue;
+    font-size: 45px;
+    text-align: left;
+}
+.content iframe 
+{
+    width: 550px;
+    height: 300px;
+    border: none;
+}
