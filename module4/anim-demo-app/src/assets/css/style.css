@@ -1,0 +1,23 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: lightgray;
+}
+.app 
+{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+    margin-top: 5%;
+    animation: 2s alternate fadeInDown;
+}
+.app h1 
+{
+    font-size: 40px;
+    text-align: center;
+    animation: 2s infinite rubberBand;
+}
