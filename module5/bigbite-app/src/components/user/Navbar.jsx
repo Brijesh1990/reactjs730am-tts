@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Navbar=()=>{
     return(
         <>
@@ -15,46 +16,45 @@ const Navbar=()=>{
   <div className="collapse navbar-collapse" id="togg">
     <ul className="float-end">
       <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="about.html">About</a>
+        <Link to="/about-us">About</Link>
       </li>
       <li className="dropdown">
-        <a href="#" className="dropdown-toggle" data-bs-toggle="dropdown">
+        <Link to="#" className="dropdown-toggle" data-bs-toggle="dropdown">
           Our services
-        </a>
+        </Link>
         <ul className="dropdown-menu bg-dark">
           <li>
-            <a href="#">Punjabi Food</a>
+            <Link to="/punjabi-food">Punjabi Food</Link>
           </li>
           <li>
-            <a href="#">Chinease Food</a>
+            <Link to="/chinease-food">Chinease Food</Link>
           </li>
           <li>
-            <a href="#">Punjabi Food</a>
+            <Link to="/gujrati-food">Gujrati Food</Link>
           </li>
         </ul>
       </li>
       <li>
-        <a href="contact.html">Contact</a>
+        <Link to="/contact-us">Contact</Link>
       </li>
       <li>
-        <a href="feedback.html">Feedback</a>
+        <Link to="/feedback-us">Feedback</Link>
       </li>
       <li>
-        <a href="gallery.html">gallery</a>
+        <Link to="/food-menu">Food Menu</Link>
       </li>
       <li>
-        <a href="#" data-bs-toggle="modal" data-bs-target="#lg">
+        <Link to="#" data-bs-toggle="modal" data-bs-target="#lg">
           Account
-        </a>
+        </Link>
       </li>
     </ul>
   </div>
 </nav>
- 
-        </>
+ </>
     )
 }
 

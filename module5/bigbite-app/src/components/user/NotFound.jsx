@@ -17,7 +17,7 @@ return(
 </h2>
 <hr className="border border-1 border-danger" />
 
-<img src={notfound} alt="not found" className="img-fluid" />
+<img src={notfound} alt="not found" className="img-fluid w-50" />
 
 </div>
 <Footer />

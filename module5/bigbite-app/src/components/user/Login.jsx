@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 const Login=()=>{
     return(
         <>
-           <div className="modal fade" role="dialog" id="lg">
+      
+  <div className="modal fade" role="dialog" id="lg">
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="row">
@@ -61,20 +64,20 @@ const Login=()=>{
                 className="btn btn-sm btn-dark text-white"
               />
               <b className="ms-3">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   data-bs-toggle="modal"
                   data-bs-target="#frg"
                   data-bs-dismiss="modal"
                 >
                   Forget Password ?
-                </a>
+                </Link>
               </b>
             </div>
             <div className="form-group mt-3">
               <b className="ms-0">
                 Don't have an Account ?
-                <a href="register.html">Create Account</a>
+                <Link to="/create-account">Create Account</Link>
               </b>
             </div>
           </form>
@@ -83,6 +86,7 @@ const Login=()=>{
     </div>
   </div>
 </div>
+
 
         </>
     )
