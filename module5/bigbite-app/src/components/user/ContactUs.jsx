@@ -52,26 +52,17 @@ const Contact=()=>{
           <div className="form-group mt-3">
             <input
               type="text"
+              name="name"
+              placeholder="Name *"
+              required=""
+              className="form-control"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <input
+              type="text"
               name="email"
               placeholder="Email *"
-              required=""
-              className="form-control"
-            />
-          </div>
-          <div className="form-group mt-3">
-            <input
-              type="password"
-              name="password"
-              placeholder="Password *"
-              required=""
-              className="form-control"
-            />
-          </div>
-          <div className="form-group mt-3">
-            <input
-              type="password"
-              name="cpassword"
-              placeholder="Confirmed Password *"
               required=""
               className="form-control"
             />
@@ -86,13 +77,18 @@ const Contact=()=>{
             />
           </div>
           <div className="form-group mt-3">
-            Male <input type="radio" name="gender" className="w-0 h-0" />
-            Female <input type="radio" name="gender" className="w-0 h-0" />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject *"
+              required=""
+              className="form-control"
+            />
           </div>
           <div className="form-group mt-3">
             <textarea
-              name="address"
-              placeholder="Address *"
+              name="message"
+              placeholder="Message *"
               required=""
               className="form-control"
               defaultValue={""}
@@ -101,15 +97,15 @@ const Contact=()=>{
           <div className="form-group mt-3">
             <input
               type="submit"
-              name="send"
-              defaultValue="Send"
+              name="send" value="Send"
+              
               className="btn btn-sm btn-dark text-white"
             />
             <input
               type="reset"
               name="reset"
               defaultValue="Reset"
-              className="btn btn-sm btn-danger text-white"
+              className="btn btn-sm ms-2 btn-danger text-white"
             />
           </div>
         </form>

@@ -1,0 +1,23 @@
+body 
+{
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+.navbar-links
+{
+  width: 100%;
+  height: auto;
+}
+.navbar-links li 
+{
+padding: 5px 30px;
+font-size: 20px;
+display: inline-block;
+}
+.navbar-links a 
+{
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+}

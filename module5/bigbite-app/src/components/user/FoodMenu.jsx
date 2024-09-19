@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 import Login from "./Login";
 import { Row } from "react-bootstrap";
 const FoodMenu=()=>{
@@ -32,7 +33,7 @@ const FoodMenu=()=>{
       <Row>
 
       <div className="col-md-5 ms-2 bg-dark text-white p-3">
-        <h3>Punjabi Food</h3>
+        <h3><Link to='/punjabi-food' className="text-white">Punjabi Food</Link></h3>
       </div>
       
       <div className="col-md-5 ms-2 bg-dark text-white p-3">  
