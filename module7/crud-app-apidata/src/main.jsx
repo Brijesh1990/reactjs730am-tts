@@ -1,10 +1,26 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import Layout from './components/Layout'
+import ManageEmployee from './components/ManageEmployee'
+import DeleteEmployee from './components/DeleteEmployee'
+import UpdateEmployee from './components/UpdateEmployee'
+import PageNotFound from './PageNotFound'
+import { BrowserRouter as Router , Routes, Route } from 'react-router-dom'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="/manage-employee" element={<ManageEmployee />} />
+        <Route path="/delete-employee" element={<DeleteEmployee />} />
+        <Route path="/update-employee" element={<UpdateEmployee />} />
+        <Route path="*" element={<PageNotFound />} />
+
+      </Routes>
+    </Router>
   </StrictMode>,
+
 )

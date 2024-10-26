@@ -1,5 +1,15 @@
 {
-    "add-employees":[
-        
-    ]
+  "add-employees": [
+    {
+      "id": "a",
+      "name": "a",
+      "email": "a",
+      "company": "a",
+      "department": "a",
+      "designation": "a",
+      "photo": "a",
+      "phone": "a",
+      "address": "a"
+    }
+  ]
 }
