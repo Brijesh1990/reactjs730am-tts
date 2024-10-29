@@ -1,15 +1,26 @@
 {
   "add-employees": [
     {
-      "id": "a",
-      "name": "a",
-      "email": "a",
-      "company": "a",
-      "department": "a",
-      "designation": "a",
-      "photo": "a",
-      "phone": "a",
-      "address": "a"
+      "id": "rk111",
+      "name": "rakesh",
+      "email": "rakesh",
+      "company": "infosys",
+      "department": "CSE",
+      "designation": "sr developer",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGbYKdJ2lIls2fMhGuhBIk72QYSOEWEarJUw&s",
+      "phone": "9998003879",
+      "address": "ahemdabad"
+    },
+    {
+      "id": "s11",
+      "name": "sanket",
+      "email": "sanket@gmail.com",
+      "company": "tops",
+      "department": "IT",
+      "designation": "trainer",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS7om3nGjPyIa_hv5j0SzTawMYCx-e6-HxcA&s",
+      "phone": "9998003879",
+      "address": "rajkot"
     }
   ]
 }

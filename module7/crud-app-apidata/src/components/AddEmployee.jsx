@@ -3,7 +3,7 @@ import { Container,Row,Card } from 'react-bootstrap'
 import FlashMessage from 'react-flash-message'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
-
+import Sidebar from './Sidebar'
 export default function AddEmployee() {
     // add employee
     const[data,setData]=useState([]);
@@ -49,28 +49,23 @@ export default function AddEmployee() {
     <div>
       <Container>
         <Row>
-            <div className='col-md-5 mt-5 p-4'>
+            <div className='col-md-4 mt-5 p-4'>
              <h3 className='p-2 bg-dark text-white'>Employee Management</h3>
-             <ul className='sidebar'>
-                <li><Link to="">Add Employee <span className='bi bi-person'></span></Link> </li>
-                <li><Link to="">Manage Employee <span className='bi bi-person'><span className='badge badge-sm bg-danger'>0</span></span></Link> </li>
-                <li><Link to="">Delete Employee <span className='bi bi-trash'></span></Link> </li>
-                <li><Link to="">Update Employee <span className='bi bi-person'></span></Link> </li>
-             </ul>   
+             <Sidebar />
             </div>
-            <div className='col-md-7 mt-5 p-4'>
+            <div className='col-md-8 mt-2 p-4'>
+            <p className='text-center p-2'>
+            {flash && (<FlashMessage duration={4000} >
+                        <div className='alert alert-success'>
+                           <strong>Employee added successfully</strong>
+                        </div>
+                      
+                   </FlashMessage>
+                   )}
+                </p>
+
                 <Card>
-                    <div className='card-header'><h3 className='bg-dark text-white p-2'>Add Employee</h3></div>
-
-                    {flash && (<FlashMessage duration={4000} >
-                        
-                         <div className='alert alert-success'>
-                            <strong>Employee added successfully</strong>
-                         </div>
-                       
-                    </FlashMessage>
-                    )}
-
+                    <div className='card-header fs-3 bg-dark text-white'>Add Employee</div>
 
                     <form onSubmit={AddEmployeeFormHandeling}>
                     <div className='card-body'>

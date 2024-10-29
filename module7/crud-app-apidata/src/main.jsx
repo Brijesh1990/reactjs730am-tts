@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route path="/manage-employee" element={<ManageEmployee />} />
-        <Route path="/delete-employee" element={<DeleteEmployee />} />
+        <Route path="/delete-employee/:id" element={<DeleteEmployee />} />
         <Route path="/update-employee" element={<UpdateEmployee />} />
         <Route path="*" element={<PageNotFound />} />
 
