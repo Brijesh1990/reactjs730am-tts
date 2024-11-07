@@ -18,8 +18,7 @@ export default function Navbar() {
         <ul>
         <li><Link to="/">Add Employee <span className='bi bi-person'></span></Link> </li>
         <li><Link to="/manage-employee">Manage Employee <span className='bi bi-person'><span className='badge badge-sm bg-danger'>{employee.length}</span></span></Link> </li>
-        <li><Link to="/delete-employee">Delete Employee <span className='bi bi-trash'></span></Link> </li>
-        <li><Link to="/update-employee">Update Employee <span className='bi bi-person'></span></Link> </li>
+       
         </ul>
        </Nav>
 )

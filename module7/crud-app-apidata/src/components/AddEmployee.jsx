@@ -11,7 +11,6 @@ export default function AddEmployee() {
     // store all ref in variables 
     const name=useRef("");
     const email=useRef("");
-    const id=useRef("");
     const company=useRef("");
     const department=useRef("");
     const designation=useRef("");
@@ -26,7 +25,6 @@ export default function AddEmployee() {
         var insert={
             name:name.current.value,
             email:email.current.value,
-            id:id.current.value,
             company:company.current.value,
             department:department.current.value,
             designation:designation.current.value,
@@ -75,10 +73,6 @@ export default function AddEmployee() {
                         
                         <div className='from-group mt-2'>
                             <input type='text' ref={email} placeholder='Employee Email *' className='form-control' />
-                        </div>
-                        
-                        <div className='from-group mt-2'>
-                            <input type='text' ref={id} placeholder='Employee Id *' className='form-control' />
                         </div>
                         
                         <div className='from-group mt-2'>

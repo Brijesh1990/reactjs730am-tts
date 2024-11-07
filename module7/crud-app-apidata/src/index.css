@@ -12,6 +12,10 @@ body
   padding: 1px 20px;
 
 }
+.nav ul 
+{
+  margin-left: 30%;
+}
 .nav a 
 {
   color: white;

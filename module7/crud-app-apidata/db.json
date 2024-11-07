@@ -1,26 +1,15 @@
 {
   "add-employees": [
     {
-      "id": "rk111",
-      "name": "rakesh",
-      "email": "rakesh",
-      "company": "infosys",
-      "department": "CSE",
-      "designation": "sr developer",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGbYKdJ2lIls2fMhGuhBIk72QYSOEWEarJUw&s",
-      "phone": "9998003879",
-      "address": "ahemdabad"
-    },
-    {
-      "id": "s11",
-      "name": "sanket",
-      "email": "sanket@gmail.com",
-      "company": "tops",
+      "name": "orange",
+      "email": "milan@gmail.com",
+      "company": "hcl",
       "department": "IT",
-      "designation": "trainer",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS7om3nGjPyIa_hv5j0SzTawMYCx-e6-HxcA&s",
-      "phone": "9998003879",
-      "address": "rajkot"
+      "designation": "sr developer",
+      "photo": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "phone": "635847895",
+      "address": "rajkot",
+      "id": "rk111"
     }
   ]
 }
