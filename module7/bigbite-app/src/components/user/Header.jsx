@@ -2,7 +2,7 @@ import React from "react";
 const Header=()=>{
     return(
         <>
-           <section id="header" className="p-4">
+  <section id="header" className="p-4">
   <div className="row">
     <div className="logo col-md-2 fs-4">
       <span className="text-dark fs-1">Bi</span>g-Bite{" "}

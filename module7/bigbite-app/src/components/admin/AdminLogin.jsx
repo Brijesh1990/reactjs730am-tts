@@ -4,8 +4,9 @@ const AdminLogin=()=>{
 return(
 <>
 {/* <!-- admin login --> */}
-<div className="container-fluid">
-  <div className="container mt-5 w-75 mx-auto">
+<body className="admin">
+
+  <div className="container mt-0 w-75 mx-auto">
     <div className="row">
       <div className="col-md-6 shadow welcome-admin p-5">
         <p className="text-center fs-1">
@@ -57,8 +58,7 @@ return(
       </div>
     </div>
   </div>
-</div>
-
+</body>
 
 </>
 ) 

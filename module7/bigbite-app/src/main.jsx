@@ -18,6 +18,9 @@ import NotFound from './components/user/NotFound'
 import AdminLogin from './components/admin/AdminLogin'
 import AdminLayout from './AdminLayout'
 import AddFoodCategory from './components/admin/AddFoodCategory'
+import ManageFoodCategory from './components/admin/ManageFoodCategory'
+import AddFood from './components/admin/AddFood'
+import ManageFood from './components/admin/ManageFood'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
@@ -32,7 +35,10 @@ createRoot(document.getElementById('root')).render(
         <Route path='/admin-login' element={<AdminLogin />} />
         <Route path='/admin-login/dashboard' element={<AdminLayout />} />
         <Route path='/admin-login/addfood-category' element={<AddFoodCategory />} />
-         
+        <Route path='/admin-login/managefood-category' element={<ManageFoodCategory />} />
+        <Route path='/admin-login/add-food' element={<AddFood />} />
+        <Route path='/admin-login/manage-food' element={<ManageFood />} />
+       
       </Routes>
     </Router>
   </StrictMode>,

@@ -1,9 +1,38 @@
-import React from 'react'
+import React,{useState,useRef} from 'react'
+import axios from 'axios';
+import Swal from 'sweetalert2';
 import AdminHeader from './AdminHeader'
 import AdminSidebar from './AdminSidebar'
-
+import { useNavigate } from 'react-router-dom';
 export default function AddFoodCategory() {
-  return (
+const[data,setData]=useState("");
+const categoryname=useRef("");
+const addeddate=useRef("");
+const descriptions=useRef("");
+const navigate=useNavigate(); 
+// create a addEvent Handeler functions
+const addCategoryData=(e)=>{
+  e.preventDefault();
+  var ins={
+    categoryname:categoryname.current.value,
+    addeddate:addeddate.current.value,
+    descriptions:descriptions.current.value
+  }
+  // call api via axios.post()
+  axios.post(`http://localhost:8000/addfoodcategores`,ins).then(()=>{
+    // pass a message
+    Swal.fire({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success"
+    }); 
+    navigate('/admin-login/addfood-category');  
+    e.target.reset();
+
+  });
+
+}
+return (
 <>
 <body className='dashboard'>
 <AdminHeader />
@@ -13,72 +42,39 @@ export default function AddFoodCategory() {
 <AdminSidebar />
 </div>
 <div className="col-md-9 admin-dashboard">
-  <div className="container p-5">
-    <div className="row">
-      <h3 className="ms-4">
-        Add Leaves <span className="bi bi-calendar" />
-      </h3>
-      <hr className="border border-2 border-primary ms-5 w-50" />
-      <div className="col-md-12 ms-4 bg-white shadow p-4 mt-4">
-        <form>
-          <div className="form-group">
-            <label className="fs-5 text-success">Select Employee</label>
-            <select name="employee" className="form-control">
-              <option value="">-select employee</option>
-              <option value="">Brijesh Pandey</option>
-            </select>
-          </div>
-          <div className="row">
-            <div className="form-group w-50 col-md-6 mt-3">
-              <label className="fs-5 text-success">Asign Leave</label>
-              <select name="leaves" className="form-control">
-                <option value="">-select Leaves</option>
-                <option value="">12</option>
-                <option value="">22</option>
-                <option value="">25</option>
-              </select>
-            </div>
-            <div className="form-group w-50 col-md-6 mt-3">
-              <label className="fs-5 text-success">Select departments</label>
-              <select name="leaves" className="form-control">
-                <option value="">-select Leaves</option>
-                <option value="">12</option>
-                <option value="">22</option>
-                <option value="">25</option>
-              </select>
-            </div>
-          </div>
-          <div className="form-group mt-3">
-            <label className="fs-5 text-success">Leave Types</label>
-            <select name="employee" className="form-control">
-              <option value="">-select Leave type</option>
-              <option value="">PL(Paid Leave)</option>
-              <option value="">LWP(Leave without Paid)</option>
-              <option value="">RH(Reasional Leave)</option>
-            </select>
-          </div>
-          <div className="form-group mt-3">
-            <input
-              type="submit"
-              name="addleave"
-              defaultValue="AddLeave"
-              className="btn btn-md btn-primary bg-primary text-white"
-            />
-            <input
-              type="submit"
-              name="reset"
-              defaultValue="Reset"
-              className="btn btn-md btn-danger bg-danger text-white ms-2"
-            />
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+<div className="container p-5">
+<div className="row">
+<h3 className="ms-4">
+Add Food Category <span className="bi bi-calendar" />
+</h3>
+<hr className="border border-2 border-primary ms-5 w-50" />
+<div className="col-md-12 ms-4 bg-white shadow p-4 mt-4">
+<form onSubmit={addCategoryData}>
+<div className="form-group mt-3">
+<input type="text" ref={categoryname} placeholder='Enter CategoryName' className="form-control" />
+</div>
+
+<div className="form-group mt-3">
+<input type="date" ref={addeddate} placeholder='Enter Added Date' className="form-control" />
+</div>
+
+<div className="form-group mt-3">
+<textarea ref={descriptions} className="form-control" placeholder='Enter Descriptions'></textarea>
+</div>
+<div className="form-group mt-3">
+<input
+type="submit"
+name="addcategory" value="AddCategory" className="btn btn-md btn-primary bg-primary text-white" />
+
+</div>
+</form>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </body>
 </>
-  )
+)
 }

@@ -1,0 +1,95 @@
+{
+  "customers": [
+    {
+      "id": "d51b"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "eb28"
+    }
+  ],
+  "contact-us": [
+    {
+      "id": "4bfa"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "3bf6"
+    }
+  ],
+  "addfoodcategores": [
+    {
+      "id": "f4f4",
+      "categoryname": "Punjabi Food",
+      "addeddate": "2024-11-12",
+      "descriptions": "Good for punjabi dishes"
+    },
+    {
+      "id": "4f33",
+      "categoryname": "Chinease Food",
+      "addeddate": "2024-11-12",
+      "descriptions": "Good for chinease dishes"
+    },
+    {
+      "id": "5055",
+      "categoryname": "Gujrati Food",
+      "addeddate": "2024-11-12",
+      "descriptions": "Good for gujrati dishes"
+    },
+    {
+      "id": "5844",
+      "categoryname": "starter food",
+      "addeddate": "2024-11-12",
+      "descriptions": "good"
+    }
+  ],
+  "addfoods": [
+    {
+      "id": "7468"
+    },
+    {
+      "id": "7e78",
+      "foodcategory": "",
+      "foodname": "Burger",
+      "foodimage": "https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4=",
+      "oldprice": "150",
+      "offerprice": "120",
+      "qty": "1",
+      "descriptions": "good",
+      "addeddate": "2024-11-16"
+    },
+    {
+      "id": "eb86",
+      "foodcategory": "Punjabi Food",
+      "foodname": "burger",
+      "foodimage": "https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4=",
+      "oldprice": "140",
+      "offerprice": "120",
+      "qty": "1",
+      "descriptions": "good",
+      "addeddate": "2025-12-18"
+    }
+  ],
+  "addfaq": [
+    {
+      "id": "5fbb"
+    }
+  ],
+  "addcountry": [
+    {
+      "id": "b841"
+    }
+  ],
+  "addstate": [
+    {
+      "id": "41ad"
+    }
+  ],
+  "addcity": [
+    {
+      "id": "489d"
+    }
+  ]
+}
