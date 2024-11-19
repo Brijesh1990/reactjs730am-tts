@@ -1,12 +1,44 @@
-import React from "react";
+import React,{useState,useRef} from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Login from "./Login";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 const Contact=()=>{
+  // create a destructured for data
+  const[data,setData]=useState("");
+  // stored all user input data in variables 
+  const name=useRef("");
+  const email=useRef("");
+  const phone=useRef("");
+  const subject=useRef("");
+  const message=useRef("");
+  const navigate=useNavigate();
+
+  // create a eventHandeler function for add data
+  const addFormData=(e)=>{
+    e.preventDefault();
+    var insert={
+      name:name.current.value,
+      email:email.current.value,
+      phone:phone.current.value,
+      subject:subject.current.value,
+      message:message.current.value
+    }
+    // call api here via axios.post()
+    axios.post(`http://localhost:8000/contact-us`,insert).then(()=>{
+      // pass inserted data messages via Swal librarries 
+      Swal.fire("Thanks for contact with us our one of admin will contact with you Soon!!");
+       
+    })
+    e.target.reset();
+    
+  }
+
     return(
         <>
-            <>
   {/* contact us start here */}
   <Header />
   <Navbar />
@@ -48,10 +80,10 @@ const Contact=()=>{
         </div>
       </div>
       <div className="col-md-6 login-frm p-5">
-        <form method="post">
+        <form method="post" onSubmit={addFormData}>
           <div className="form-group mt-3">
             <input
-              type="text"
+              type="text" ref={name}
               name="name"
               placeholder="Name *"
               required=""
@@ -60,7 +92,7 @@ const Contact=()=>{
           </div>
           <div className="form-group mt-3">
             <input
-              type="text"
+              type="text" ref={email}
               name="email"
               placeholder="Email *"
               required=""
@@ -69,7 +101,7 @@ const Contact=()=>{
           </div>
           <div className="form-group mt-3">
             <input
-              type="text"
+              type="text" ref={phone}
               name="phone"
               placeholder="Phone *"
               required=""
@@ -78,7 +110,7 @@ const Contact=()=>{
           </div>
           <div className="form-group mt-3">
             <input
-              type="text"
+              type="text" ref={subject}
               name="subject"
               placeholder="Subject *"
               required=""
@@ -87,7 +119,7 @@ const Contact=()=>{
           </div>
           <div className="form-group mt-3">
             <textarea
-              name="message"
+              name="message" ref={message}
               placeholder="Message *"
               required=""
               className="form-control"
@@ -101,12 +133,12 @@ const Contact=()=>{
               
               className="btn btn-sm btn-dark text-white"
             />
-            <input
+            {/* <input
               type="reset"
               name="reset"
               defaultValue="Reset"
               className="btn btn-sm ms-2 btn-danger text-white"
-            />
+            /> */}
           </div>
         </form>
       </div>
@@ -116,7 +148,7 @@ const Contact=()=>{
   <Login />
 </>
 
-        </>
+        
     )
 }
 

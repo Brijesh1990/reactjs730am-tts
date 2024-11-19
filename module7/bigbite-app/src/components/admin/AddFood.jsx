@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 
 export default function AddFood() {
-  // destructure data
+// destructure data
 const [foodCat, setFoodCat] = useState([]);
 // fetch a food category to display in select 
 useEffect(()=>{   

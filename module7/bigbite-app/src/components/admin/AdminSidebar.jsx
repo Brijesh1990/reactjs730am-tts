@@ -66,7 +66,7 @@ Add FAQ
 </a>
 </li>
 <li>
-<a href="managecontacts.html">
+<a href="/admin-login/managecontacts">
 <span className="bi bi-book" />
 Manage Contacts
 </a>

@@ -11,7 +11,44 @@
   ],
   "contact-us": [
     {
-      "id": "4bfa"
+      "id": "7d08",
+      "name": "brijesh",
+      "email": "bkpandey.pandey@gmail.com",
+      "phone": "9998003879",
+      "subject": "hi",
+      "message": "i am brijesh want customer care numbers"
+    },
+    {
+      "id": "ddfc",
+      "name": "dhyanesh",
+      "email": "dhyaneshjoshi@gmail.com",
+      "phone": "85121212121",
+      "subject": "hi",
+      "message": "hi please attend lectures"
+    },
+    {
+      "id": "13d7",
+      "name": "hitesh",
+      "email": "hitesh@gmail.com",
+      "phone": "9998003879",
+      "subject": "hi",
+      "message": "hi"
+    },
+    {
+      "id": "4c05",
+      "name": "lokesh",
+      "email": "lokesh@gmail.com",
+      "phone": "9998003879",
+      "subject": "hi",
+      "message": "hi"
+    },
+    {
+      "id": "40c3",
+      "name": "oo",
+      "email": "ooo",
+      "phone": "ooo",
+      "subject": "ooo",
+      "message": "oo"
     }
   ],
   "reviews": [

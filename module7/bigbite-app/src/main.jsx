@@ -21,6 +21,7 @@ import AddFoodCategory from './components/admin/AddFoodCategory'
 import ManageFoodCategory from './components/admin/ManageFoodCategory'
 import AddFood from './components/admin/AddFood'
 import ManageFood from './components/admin/ManageFood'
+import ManageContacts from './components/admin/ManageContacts'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
@@ -38,6 +39,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='/admin-login/managefood-category' element={<ManageFoodCategory />} />
         <Route path='/admin-login/add-food' element={<AddFood />} />
         <Route path='/admin-login/manage-food' element={<ManageFood />} />
+        <Route path='/admin-login/managecontacts' element={<ManageContacts />} />
+        
        
       </Routes>
     </Router>
